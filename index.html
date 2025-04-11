@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="XerXes - Professional Developer Portfolio showcasing innovative web solutions, specializing in modern web applications.">
+  <meta name="keywords" content="developer portfolio, web development, XerXes, full-stack developer, web applications">
+  <meta name="author" content="XerXes">
+  <meta name="robots" content="index, follow">
+  <title>XerXes - Professional Developer Portfolio</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/jpg" href="XerXes.png">
+  <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div id="snow-particles-js"></div>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" aria-label="Toggle dark/light theme" title="Toggle theme">
+    <i class="bx bx-moon"></i>
+  </button>
+
+  <!-- Header Section -->
+  <header class="header" id="home" role="banner">
+    <div class="logo" data-aos="fade-down" data-aos-duration="800">
+      <span>Xer</span>Xes
+    </div>
+    <nav aria-label="Main navigation">
+      <div class="menu-toggle" id="menu-toggle" role="button" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-menu">
+        <!-- <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="50"><a class="active" href="#home">Home</a></li> -->
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="50"><a class="active" href="#homes">Home</a></li>
+        <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="100"><a href="#stats">Stats</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="150"><a href="#about">About</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><a href="#projects">Projects</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="250"><a href="#skills">Skills</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><a href="#testimonials">Testimonials</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="350"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" role="region" aria-labelledby="hero-heading" id="homes">
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+      <h1 id="hero-heading">Hey, I’m <span>XerXes</span></h1>
+      <h2>Building Innovative Web Solutions</h2>
+      <p>Specializing in crafting high-performance, accessible, and user-centric web applications that drive impact.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn primary" aria-label="Hire Me">Hire Me</a>
+        <a href="#projects" class="btn secondary" aria-label="View Projects">View Projects</a>
+        <div class="footer-socials" role="navigation" aria-label="Footer social media links">
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+          <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="https://discord.com/users/1309405779299926101/" target="_blank" rel="noopener" aria-label="Discord"><i class="bx bxl-discord"></i></a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://www.instagram.com/needless.helplessness/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+          <a href="https://wa.me/+916206192009" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+      <picture>
+        <source srcset="XerM.jpg" type="image/jpg">
+        <img loading="lazy" src="XerM.jpg" alt="XerXes Profile Picture" width="360" height="360">
+      </picture>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="stats-section" data-aos="fade-up" data-aos-duration="500" id="stats" role="region" aria-labelledby="stats-heading">
+    <h2 id="stats-heading" class="sr-only">Statistics</h2>
+    <div class="stat-card">
+      <i class="bx bx-time"></i>
+      <h3><span class="count" data-target="4">0</span>+</h3>
+      <p>Years of Experience</p>
+    </div>
+    <div class="stat-card">
+      <i class="bx bx-code"></i>
+      <h3><span class="count" data-target="10">0</span>+</h3>
+      <p>Technical Skills</p>
+    </div>
+    <div class="stat-card">
+      <i class="bx bx-briefcase"></i>
+      <h3><span class="count" data-target="60">0</span>+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat-card">
+      <i class="bx bx-user"></i>
+      <h3><span class="count" data-target="90">0</span>+</h3>
+      <p>Satisfied Clients</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about-section" id="about" role="region" aria-labelledby="about-heading">
+    <h2 id="about-heading" data-aos="fade-up" data-aos-duration="800">About Me</h2>
+    <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      I’m a passionate developer with over 4 years of experience in building dynamic and scalable web applications. My expertise lies in creating seamless user experiences through clean code, modern frameworks, and innovative solutions. I thrive on solving complex challenges and delivering projects that make a difference.
+    </p>
+    <a href="#contact" class="btn primary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Let’s Collaborate</a>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects" role="region" aria-labelledby="projects-heading">
+    <h2 id="projects-heading" data-aos="fade-up" data-aos-duration="800">Featured Projects</h2>
+    <div class="projects-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="starline.jpg" alt="Interactive Dashboard Preview" width="400" height="400">
+        </div>
+        <h3>Interactive Dashboard</h3>
+        <p>A real-time analytics dashboard built with React, Chart.js, and Node.js, optimized for performance.</p>
+        <div class="project-links">
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View Interactive Dashboard">View Project</a>
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Interactive Dashboard">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="starline.jpg" alt="E-Commerce Platform Preview" width="400" height="400">
+        </div>
+        <h3>E-Commerce Platform</h3>
+        <p>A scalable online store with Stripe integration, built using Next.js and MongoDB.</p>
+        <div class="project-links">
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View E-Commerce Platform">View Project</a>
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for E-Commerce Platform">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="starline.jpg" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="#" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills-section" id="skills" role="region" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" data-aos="fade-up" data-aos-duration="800">My Skills</h2>
+    <div class="skills-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="skill-item"><i class="bx bxl-c-plus-plus"></i> C++</div>
+      <div class="skill-item"><i class="bx bxl-c-sharp"></i> C#</div>
+      <div class="skill-item"><i class="bx bxl-python"></i> Python</div>
+      <div class="skill-item"><i class="bx bxl-nodejs"></i> Node.js</div>
+      <div class="skill-item"><i class="bx bx-code-alt"></i> Go</div>
+      <div class="skill-item"><i class="bx bxl-git"></i> Git</div>
+      <div class="skill-item"><i class="bx bxl-html5"></i> HTML5</div>
+      <div class="skill-item"><i class="bx bxl-css3"></i> CSS3</div>
+      <div class="skill-item"><i class="bx bxl-javascript"></i> JavaScript</div>
+      <div class="skill-item"><i class="bx bxl-react"></i> React</div>
+      <div class="skill-item"><i class="bx bxl-typescript"></i> TypeScript</div>
+      <div class="skill-item"><i class="bx bxl-mongodb"></i> MongoDB</div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-section" id="testimonials" role="region" aria-labelledby="testimonials-heading">
+    <h2 id="testimonials-heading" data-aos="fade-up" data-aos-duration="800">Small Client Reviews</h2>
+    <div class="testimonials-carousel" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="testimonial-card">
+        <p>"XerXes delivered an exceptional web application that exceeded our expectations. Their attention to detail and professionalism is unmatched!"</p>
+        <h4>Jane Doe</h4>
+        <span>CEO, TechCorp</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"Working with XerXes was a breeze. They transformed our ideas into a seamless, user-friendly platform with incredible speed."</p>
+        <h4>John Smith</h4>
+        <span>Founder, StartUp Inc.</span>
+      </div>
+      <div class="testimonial-card">
+        <p>"The creativity and technical expertise XerXes brought to our project were phenomenal. Highly recommended!"</p>
+        <h4>Emily Brown</h4>
+        <span>Product Manager, Innovate Ltd.</span>
+      </div>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-prev" aria-label="Previous testimonial"><i class="bx bx-chevron-left"></i></button>
+      <button class="carousel-next" aria-label="Next testimonial"><i class="bx bx-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact" role="region" aria-labelledby="contact-heading">
+    <h2 id="contact-heading" data-aos="fade-up" data-aos-duration="800">Get In Touch</h2>
+    <form action="https://formspree.io/f/xpwpkegl" method="POST" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200" class="contact-form" id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Email">
+      <textarea name="message" placeholder="Your Message" required aria-label="Message"></textarea>
+      <input type="text" name="_honeypot" style="display:none" aria-hidden="true">
+      <button type="submit" class="btn primary" disabled aria-label="Send Message">Send Message</button>
+      <p class="form-message" id="form-message" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer" role="contentinfo">
+    <p>© 2025 XerXes. All rights reserved.</p>
+    <div class="footer-socials" role="navigation" aria-label="Footer social media links">
+      <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="https://discord.com/users/1309405779299926101/" target="_blank" rel="noopener" aria-label="Discord"><i class="bx bxl-discord"></i></a>
+      <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+      <a href="https://www.instagram.com/needless.helplessness/" target="_blank" rel="noopener" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="https://wa.me/+916206192009" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i class="bx bx-chevron-up"></i>
+    <svg class="progress-circle" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="45"></circle>
+    </svg>
+  </button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
