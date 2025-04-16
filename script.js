@@ -1,10 +1,10 @@
-// Initialize AOS animations
+/* Initialize AOS animations */
 function initAOS() {
   AOS.init({
-    duration: 1000,
+    duration: 800,
     easing: "ease-out-cubic",
     once: true,
-    offset: 100,
+    offset: 120,
   });
 }
 
@@ -54,7 +54,7 @@ function initAOS() {
       });
   }
 
-// Handle menu toggle
+/* Handle menu toggle */
 function initMenuToggle() {
   const menuToggle = document.getElementById("menu-toggle");
   const navMenu = document.querySelector(".nav-menu");
@@ -81,7 +81,7 @@ function initMenuToggle() {
   });
 }
 
-// Handle back to top button
+/* Handle back to top button */
 function initBackToTop() {
   const backToTop = document.querySelector(".back-to-top");
   const progressCircle = backToTop.querySelector(".progress-circle circle");
@@ -98,7 +98,7 @@ function initBackToTop() {
   });
 }
 
-// Animate stats on scroll
+/* Animate stats on scroll */
 function initStatsAnimation() {
   const counters = document.querySelectorAll(".count");
   const observer = new IntersectionObserver(
@@ -108,9 +108,10 @@ function initStatsAnimation() {
           const counter = entry.target;
           const target = parseInt(counter.getAttribute("data-target"));
           let count = 0;
+          const duration = 1500; // Animation duration in ms
+          const step = target / (duration / 16); // 60 FPS
           const updateCounter = () => {
-            const increment = target / 100;
-            count += increment;
+            count += step;
             if (count < target) {
               counter.textContent = Math.ceil(count);
               requestAnimationFrame(updateCounter);
@@ -123,13 +124,13 @@ function initStatsAnimation() {
         }
       });
     },
-    { threshold: 0.5 }
+    { threshold: 0.5 },
   );
 
   counters.forEach((counter) => observer.observe(counter));
 }
 
-// Handle testimonials carousel
+/* Handle testimonials carousel */
 function initTestimonialsCarousel() {
   const carousel = document.querySelector(".testimonials-carousel");
   const cards = carousel.querySelectorAll(".testimonial-card");
@@ -155,24 +156,55 @@ function initTestimonialsCarousel() {
 
   showCard(currentIndex);
 
-  setInterval(() => {
+  const interval = setInterval(() => {
     currentIndex = (currentIndex + 1) % cards.length;
     showCard(currentIndex);
   }, 5000);
+
+  // Pause on hover
+  carousel.addEventListener("mouseenter", () => clearInterval(interval));
+  carousel.addEventListener("mouseleave", () => {
+    clearInterval(interval);
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    }, 5000);
+  });
 }
 
-// Handle contact form submission
+/* Handle contact form submission */
 function initContactForm() {
   const contactForm = document.getElementById("contact-form");
   const formMessage = document.getElementById("form-message");
   const submitButton = contactForm.querySelector("button[type='submit']");
+  const formGroups = contactForm.querySelectorAll(".form-group");
 
   function validateForm() {
-    const name = contactForm.querySelector("input[name='name']").value.trim();
-    const email = contactForm.querySelector("input[name='email']").value.trim();
-    const message = contactForm.querySelector("textarea[name='message']").value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return name.length >= 2 && emailRegex.test(email) && message.length >= 10;
+    let isValid = true;
+    formGroups.forEach((group) => {
+      const input = group.querySelector("input, textarea");
+      const errorMessage = group.querySelector(".error-message");
+      const value = input.value.trim();
+
+      if (input.name === "name" && value.length < 2) {
+        errorMessage.textContent = "Name must be at least 2 characters.";
+        isValid = false;
+      } else if (input.name === "email") {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) {
+          errorMessage.textContent = "Please enter a valid email.";
+          isValid = false;
+        } else {
+          errorMessage.textContent = "";
+        }
+      } else if (input.name === "message" && value.length < 10) {
+        errorMessage.textContent = "Message must be at least 10 characters.";
+        isValid = false;
+      } else {
+        errorMessage.textContent = "";
+      }
+    });
+    return isValid;
   }
 
   contactForm.addEventListener("input", () => {
@@ -182,14 +214,14 @@ function initContactForm() {
   contactForm.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (!validateForm()) {
-      formMessage.textContent = "Please fill out all fields correctly.";
-      formMessage.style.color = "#EF4444";
+      formMessage.textContent = "Please correct the errors above.";
+      formMessage.style.color = "var(--error-color)";
       return;
     }
 
     submitButton.disabled = true;
     formMessage.textContent = "Sending message...";
-    formMessage.style.color = getComputedStyle(document.documentElement).getPropertyValue('--text').trim();
+    formMessage.style.color = "var(--text)";
 
     try {
       const formData = new FormData(contactForm);
@@ -203,15 +235,18 @@ function initContactForm() {
 
       if (response.ok) {
         formMessage.textContent = "Message sent successfully!";
-        formMessage.style.color = "#10B981";
+        formMessage.style.color = "var(--success-color)";
         contactForm.reset();
         submitButton.disabled = true;
+        formGroups.forEach((group) => {
+          group.querySelector(".error-message").textContent = "";
+        });
       } else {
         throw new Error("Failed to send message");
       }
     } catch (error) {
       formMessage.textContent = "Failed to send message. Please try again.";
-      formMessage.style.color = "#EF4444";
+      formMessage.style.color = "var(--error-color)";
     } finally {
       setTimeout(() => {
         formMessage.textContent = "";
@@ -221,24 +256,24 @@ function initContactForm() {
   });
 }
 
-// Handle theme toggle
+/* Handle theme toggle */
 function initThemeToggle() {
   const themeToggle = document.querySelector(".theme-toggle");
   const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
   const currentTheme = localStorage.getItem("theme") || (prefersDarkScheme.matches ? "dark" : "light");
 
   document.documentElement.setAttribute("data-theme", currentTheme);
-  themeToggle.querySelector("i").className = currentTheme === "dark" ? "bx bx-moon" : "bx bx-sun";
+  themeToggle.querySelector("i").className = currentTheme === "dark" ? "bx bx-sun" : "bx bx-moon";
 
   themeToggle.addEventListener("click", () => {
     const newTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
-    themeToggle.querySelector("i").className = newTheme === "dark" ? "bx bx-moon" : "bx bx-sun";
+    themeToggle.querySelector("i").className = newTheme === "dark" ? "bx bx-sun" : "bx bx-moon";
   });
 }
 
-// Initialize all functionality
+/* Initialize all functionality */
 document.addEventListener("DOMContentLoaded", () => {
   initAOS();
   initParticles();
