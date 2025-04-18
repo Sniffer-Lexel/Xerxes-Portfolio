@@ -3,28 +3,279 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="XerXes - Professional Developer Portfolio showcasing innovative web solutions, specializing in modern web applications.">
-  <meta name="keywords" content="developer portfolio, web development, XerXes, full-stack developer, web applications">
-  <meta name="author" content="XerXes">
+  <meta name="description" content="DxD - Innovative Web Solutions Company delivering cutting-edge web applications and digital experiences.">
+  <meta name="keywords" content="web development, DxD, full-stack development, web applications, digital solutions">
+  <meta name="author" content="DxD">
   <meta name="robots" content="index, follow">
   <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="XerXes - Professional Developer Portfolio">
-  <meta property="og:description" content="Explore XerXes' portfolio showcasing innovative web solutions and modern web applications.">
-  <meta property="og:image" content="https://yourdomain.com/XerM.jpg">
+  <meta property="og:title" content="DxD - Innovative Web Solutions">
+  <meta property="og:description" content="Discover DxD's portfolio of cutting-edge web applications and digital solutions crafted for impact.">
+  <meta property="og:image" content="https://yourdomain.com/DxD.jpg">
   <meta property="og:url" content="https://yourdomain.com">
   <meta property="og:type" content="website">
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="XerXes - Professional Developer Portfolio">
-  <meta name="twitter:description" content="Explore XerXes' portfolio showcasing innovative web solutions and modern web applications.">
-  <meta name="twitter:image" content="https://yourdomain.com/XerM.jpg">
-  <title>XerXes - Professional Developer Portfolio</title>
+  <meta name="twitter:title" content="DxD - Innovative Web Solutions">
+  <meta name="twitter:description" content="Discover DxD's portfolio of cutting-edge web applications and digital solutions crafted for impact.">
+  <meta name="twitter:image" content="https://yourdomain.com/DxD.jpg">
+  <title>DxD - Innovative Web Solutions</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/jpg" href="X.png">
+  <link rel="icon" type="png" href="Header.png">
   <link href="https://unpkg.com/boxicons@latest/css/boxicons.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+  <style>
+    /* Owner Section */
+    .owner-section {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 80px 40px;
+      text-align: center;
+      background: var(--card-bg);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .owner-section h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .owner-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .owner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      justify-items: center;
+    }
+
+    .owner-card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .owner-card:hover {
+      transform: scale(1.05) translateY(-10px);
+      box-shadow: var(--shadow);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .owner-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 16px;
+      border: 3px solid var(--primary-color);
+    }
+
+    .owner-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .owner-card h3 {
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .owner-card .role {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .owner-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      max-width: 240px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .owner-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .owner-socials a {
+      color: var(--text);
+      font-size: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .owner-socials a:hover {
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .owner-socials a:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    /* Team Section */
+    .team-section {
+      max-width: 1100px;
+      margin: 0 auto 80px;
+      padding: 80px 40px;
+      text-align: center;
+      background: var(--card-bg);
+      border-radius: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .team-section h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .team-section h2::after {
+      content: "";
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+      border-radius: 2px;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+      justify-items: center;
+    }
+
+    .team-card {
+      background: var(--card-bg);
+      padding: 24px;
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .team-card:hover {
+      transform: scale(1.05) translateY(-10px);
+      box-shadow: var(--shadow);
+      background: rgba(59, 130, 246, 0.1);
+    }
+
+    .team-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 16px;
+      border: 3px solid var(--primary-color);
+    }
+
+    .team-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-card h3 {
+      font-size: 22px;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .team-card .role {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+
+    .team-card p {
+      font-size: 15px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      max-width: 240px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .team-socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .team-socials a {
+      color: var(--text);
+      font-size: 22px;
+      transition: all 0.3s ease;
+    }
+
+    .team-socials a:hover {
+      color: var(--primary-color);
+      transform: translateY(-3px);
+    }
+
+    .team-socials a:focus {
+      outline: 2px solid var(--primary-color);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 768px) {
+      .team-section, .owner-section {
+        padding: 64px 24px;
+      }
+      .team-grid, .owner-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .team-section, .owner-section {
+        padding: 48px 16px;
+      }
+      .team-card h3, .owner-card h3 {
+        font-size: 20px;
+      }
+      .team-image, .owner-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="particles-js"></div>
@@ -38,7 +289,7 @@
   <!-- Header Section -->
   <header class="header" id="home" role="banner">
     <div class="logo" data-aos="fade-down" data-aos-duration="800">
-      <span>Xer</span>Xes
+      <span>D</span>xD
     </div>
     <nav aria-label="Main navigation">
       <div class="menu-toggle" id="menu-toggle" role="button" aria-label="Toggle menu" aria-expanded="false">
@@ -50,7 +301,9 @@
         <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="50"><a class="active" href="#home">Home</a></li>
         <li data-aos="fade-down" data-aos-duration="800" data-aos-delay="100"><a href="#stats">Stats</a></li>
         <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="150"><a href="#about">About</a></li>
-        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><a href="#projects">Projects</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="175"><a href="#owner">Owner</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="200"><a href="#team">Team</a></li>
+        <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="225"><a href="#projects">Projects</a></li>
         <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="250"><a href="#skills">Skills</a></li>
         <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="300"><a href="#testimonials">Testimonials</a></li>
         <li data-aos="fade-up" data-aos-duration="800" data-aos-delay="350"><a href="#contact">Contact</a></li>
@@ -61,11 +314,11 @@
   <!-- Hero Section -->
   <section class="hero-section" role="region" aria-labelledby="hero-heading" id="home">
     <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
-      <h1 id="hero-heading">Hey, I’m <span>XerXes</span></h1>
-      <h2>Building Innovative Web Solutions</h2>
-      <p>Specializing in crafting high-performance, accessible, and user-centric web applications that drive impact.</p>
+      <h1 id="hero-heading">Welcome to <span>DxD</span></h1>
+      <h2>Crafting Cutting-Edge Digital Solutions</h2>
+      <p>We specialize in delivering high-performance, scalable, and user-centric web applications that transform businesses.</p>
       <div class="hero-actions">
-        <a href="#contact" class="btn primary" aria-label="Hire Me">Hire Me</a>
+        <a href="#contact" class="btn primary" aria-label="Get in Touch">Get in Touch</a>
         <a href="#projects" class="btn secondary" aria-label="View Projects">View Projects</a>
         <div class="footer-socials" role="navigation" aria-label="Social media links">
           <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
@@ -80,8 +333,8 @@
     </div>
     <div class="hero-image" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
       <picture>
-        <source srcset="XerXes.gif" type="image/jpg">
-        <img loading="lazy" src="XerXes.gif" alt="XerXes Profile Picture" width="360" height="360">
+        <source srcset="DxD.webp" type="image/webp">
+        <img loading="lazy" src="DxD.webp" alt="DxD Company Logo" width="360" height="360">
       </picture>
     </div>
   </section>
@@ -91,38 +344,195 @@
     <h2 id="stats-heading" class="sr-only">Statistics</h2>
     <div class="stat-card">
       <i class="bx bx-time"></i>
-      <h3><span class="count" data-target="4">0</span>+</h3>
-      <p>Years of Experience</p>
+      <h3><span class="count" data-target="5">0</span>+</h3>
+      <p>Years in Business</p>
     </div>
     <div class="stat-card">
       <i class="bx bx-code"></i>
-      <h3><span class="count" data-target="10">0</span>+</h3>
-      <p>Technical Skills</p>
+      <h3><span class="count" data-target="15">0</span>+</h3>
+      <p>Technologies Mastered</p>
     </div>
     <div class="stat-card">
       <i class="bx bx-briefcase"></i>
-      <h3><span class="count" data-target="60">0</span>+</h3>
-      <p>Projects Completed</p>
+      <h3><span class="count" data-target="100">0</span>+</h3>
+      <p>Projects Delivered</p>
     </div>
     <div class="stat-card">
       <i class="bx bx-user"></i>
-      <h3><span class="count" data-target="90">0</span>+</h3>
-      <p>Satisfied Clients</p>
+      <h3><span class="count" data-target="120">0</span>+</h3>
+      <p>Happy Clients</p>
     </div>
   </section>
 
   <!-- About Section -->
   <section class="about-section" id="about" role="region" aria-labelledby="about-heading">
-    <h2 id="about-heading" data-aos="fade-up" data-aos-duration="800">About Me</h2>
+    <h2 id="about-heading" data-aos="fade-up" data-aos-duration="800">About DxD</h2>
     <p data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-      I’m a passionate developer with over 4 years of experience in building dynamic and scalable web applications. My expertise lies in creating seamless user experiences through clean code, modern frameworks, and innovative solutions. I thrive on solving complex challenges and delivering projects that make a difference.
+      DxD is a dynamic web development company founded by Ayush and Sujal, two passionate innovators with over 5 years of combined experience. We specialize in building scalable, high-performance web applications that empower businesses to thrive in the digital age. Our mission is to deliver innovative solutions through clean code, modern frameworks, and a client-centric approach.
     </p>
-    <a href="#contact" class="btn primary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Let’s Collaborate</a>
+    <a href="#contact" class="btn primary" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">Partner with Us</a>
+  </section>
+
+  <!-- Owners -->
+  <section class="owner-section" id="owner" role="region" aria-labelledby="owner-heading">
+    <h2 id="owner-heading" data-aos="fade-up" data-aos-duration="800">Meet Our Owners</h2>
+    <div class="owner-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="owner-card">
+        <div class="owner-image">
+          <img loading="lazy" src="Aayush.webp" alt="Ayush Profile Picture" width="120" height="120">
+        </div>
+        <h3>Ayush</h3>
+        <span class="role">Co-Founder & Lead Developer</span>
+        <p>Passionate about crafting scalable web solutions with a focus on performance and user experience.</p>
+        <div class="owner-socials">
+          <a href="https://t.me/xerxesatwork" target="_blank" rel="noopener" aria-label="Ayush Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+916206192009" target="_blank" rel="noopener" aria-label="Ayush WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="Ayush GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="owner-card">
+        <div class="owner-image">
+          <img loading="lazy" src="Sujal.webp" alt="Sujal Profile Picture" width="120" height="120">
+        </div>
+        <h3>Sujal</h3>
+        <span class="role">Co-Founder & Tech Strategist</span>
+        <p>Expert in architecting innovative digital solutions and driving technical excellence.</p>
+        <div class="owner-socials">
+          <a href="https://t.me/ft_echo" target="_blank" rel="noopener" aria-label="Sujal Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+916289588359" target="_blank" rel="noopener" aria-label="Sujal WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com" target="_blank" rel="noopener" aria-label="Sujal GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="team-section" id="team" role="region" aria-labelledby="team-heading">
+    <h2 id="team-heading" data-aos="fade-up" data-aos-duration="800">Our Team</h2>
+    <div class="team-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Rahul Sharma Profile Picture" width="120" height="120">
+        </div>
+        <h3>Rahul Sharma</h3>
+        <span class="role">Senior Frontend Developer</span>
+        <p>Specializes in creating responsive and interactive user interfaces with React and Tailwind CSS.</p>
+        <div class="team-socials">
+          <a href="https://t.me/rahulsharma" target="_blank" rel="noopener" aria-label="Rahul Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+918888888888" target="_blank" rel="noopener" aria-label="Rahul WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/rahulsharma" target="_blank" rel="noopener" aria-label="Rahul GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Priya Patel Profile Picture" width="120" height="120">
+        </div>
+        <h3>Priya Patel</h3>
+        <span class="role">Backend Developer</span>
+        <p>Expert in building robust APIs and server-side logic using Node.js and MongoDB.</p>
+        <div class="team-socials">
+          <a href="https://t.me/priyapatel" target="_blank" rel="noopener" aria-label="Priya Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+919999999999" target="_blank" rel="noopener" aria-label="Priya WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/priyapatel" target="_blank" rel="noopener" aria-label="Priya GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Vikram Singh Profile Picture" width="120" height="120">
+        </div>
+        <h3>Vikram Singh</h3>
+        <span class="role">UI/UX Designer</span>
+        <p>Focuses on designing intuitive and visually appealing user experiences.</p>
+        <div class="team-socials">
+          <a href="https://t.me/vikramsingh" target="_blank" rel="noopener" aria-label="Vikram Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+917777777777" target="_blank" rel="noopener" aria-label="Vikram WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/vikramsingh" target="_blank" rel="noopener" aria-label="Vikram GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Neha Gupta Profile Picture" width="120" height="120">
+        </div>
+        <h3>Neha Gupta</h3>
+        <span class="role">Full Stack Developer</span>
+        <p>Proficient in both frontend and backend development with expertise in JavaScript and Python.</p>
+        <div class="team-socials">
+          <a href="https://t.me/nehagupta" target="_blank" rel="noopener" aria-label="Neha Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+916666666666" target="_blank" rel="noopener" aria-label="Neha WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/nehagupta" target="_blank" rel="noopener" aria-label="Neha GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Amit Kumar Profile Picture" width="120" height="120">
+        </div>
+        <h3>Amit Kumar</h3>
+        <span class="role">DevOps Engineer</span>
+        <p>Specializes in cloud infrastructure and CI/CD pipelines using AWS and Docker.</p>
+        <div class="team-socials">
+          <a href="https://t.me/amitkumar" target="_blank" rel="noopener" aria-label="Amit Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+915555555555" target="_blank" rel="noopener" aria-label="Amit WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/amitkumar" target="_blank" rel="noopener" aria-label="Amit GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Sneha Reddy Profile Picture" width="120" height="120">
+        </div>
+        <h3>Sneha Reddy</h3>
+        <span class="role">Quality Assurance Engineer</span>
+        <p>Ensures top-notch quality through rigorous testing and automation frameworks.</p>
+        <div class="team-socials">
+          <a href="https://t.me/snehareddy" target="_blank" rel="noopener" aria-label="Sneha Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+914444444444" target="_blank" rel="noopener" aria-label="Sneha WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/snehareddy" target="_blank" rel="noopener" aria-label="Sneha GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Rohan Desai Profile Picture" width="120" height="120">
+        </div>
+        <h3>Rohan Desai</h3>
+        <span class="role">Mobile App Developer</span>
+        <p>Expert in building cross-platform mobile apps using Flutter and React Native.</p>
+        <div class="team-socials">
+          <a href="https://t.me/rohandesai" target="_blank" rel="noopener" aria-label="Rohan Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+913333333333" target="_blank" rel="noopener" aria-label="Rohan WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/rohandesai" target="_blank" rel="noopener" aria-label="Rohan GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Kavita Sharma Profile Picture" width="120" height="120">
+        </div>
+        <h3>Kavita Sharma</h3>
+        <span class="role">Product Manager</span>
+        <p>Drives product development with a focus on user needs and market trends.</p>
+        <div class="team-socials">
+          <a href="https://t.me/kavitasharma" target="_blank" rel="noopener" aria-label="Kavita Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+912222222222" target="_blank" rel="noopener" aria-label="Kavita WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/kavitasharma" target="_blank" rel="noopener" aria-label="Kavita GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img loading="lazy" src="Sujal.webp" alt="Arjun Mehra Profile Picture" width="120" height="120">
+        </div>
+        <h3>Arjun Mehra</h3>
+        <span class="role">Data Scientist</span>
+        <p>Utilizes machine learning and data analysis to provide actionable insights.</p>
+        <div class="team-socials">
+          <a href="https://t.me/arjunmehra" target="_blank" rel="noopener" aria-label="Arjun Telegram"><i class="bx bxl-telegram"></i></a>
+          <a href="https://wa.me/+911111111111" target="_blank" rel="noopener" aria-label="Arjun WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+          <a href="https://github.com/arjunmehra" target="_blank" rel="noopener" aria-label="Arjun GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
   <section class="projects-section" id="projects" role="region" aria-labelledby="projects-heading">
-    <h2 id="projects-heading" data-aos="fade-up" data-aos-duration="800">Featured Projects</h2>
+    <h2 id="projects-heading" data-aos="fade-up" data-aos-duration="800">Our Projects</h2>
     <div class="projects-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
       <div class="project-card">
         <div class="project-image">
@@ -157,12 +567,78 @@
           <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
         </div>
       </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img loading="lazy" src="imgui.png" alt="Portfolio Showcase Preview" width="400" height="400">
+        </div>
+        <h3>Portfolio Showcase</h3>
+        <p>A modern portfolio with advanced animations, accessibility, and responsive design.</p>
+        <div class="project-links">
+          <a href="https://example.com/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Portfolio Showcase">View Project</a>
+          <a href="https://github.com/example/portfolio" class="btn secondary" target="_blank" rel="noopener" aria-label="View Code for Portfolio Showcase">View Code</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section class="skills-section" id="skills" role="region" aria-labelledby="skills-heading">
-    <h2 id="skills-heading" data-aos="fade-up" data-aos-duration="800">My Skills</h2>
+    <h2 id="skills-heading" data-aos="fade-up" data-aos-duration="800">Our Expertise</h2>
     <div class="skills-grid" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
       <div class="skill-item"><i class="bx bxl-c-plus-plus"></i> C++</div>
       <div class="skill-item"><i class="bx bxl-c-plus-plus"></i> C#</div>
@@ -184,17 +660,17 @@
     <h2 id="testimonials-heading" data-aos="fade-up" data-aos-duration="800">Client Reviews</h2>
     <div class="testimonials-carousel" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
       <div class="testimonial-card active">
-        <p>"XerXes delivered an exceptional web application that exceeded our expectations. Their attention to detail and professionalism is unmatched!"</p>
+        <p>"DxD delivered an exceptional web application that exceeded our expectations. Their professionalism and expertise are unmatched!"</p>
         <h4>Jane Doe</h4>
         <span>CEO, TechCorp</span>
       </div>
       <div class="testimonial-card">
-        <p>"Working with XerXes was a breeze. They transformed our ideas into a seamless, user-friendly platform with incredible speed."</p>
+        <p>"Working with DxD was seamless. They transformed our vision into a user-friendly platform with incredible efficiency."</p>
         <h4>John Smith</h4>
         <span>Founder, StartUp Inc.</span>
       </div>
       <div class="testimonial-card">
-        <p>"The creativity and technical expertise XerXes brought to our project were phenomenal. Highly recommended!"</p>
+        <p>"DxD’s creativity and technical prowess brought our project to life. Highly recommended for any business!"</p>
         <h4>Emily Brown</h4>
         <span>Product Manager, Innovate Ltd.</span>
       </div>
@@ -229,7 +705,7 @@
 
   <!-- Footer Section -->
   <footer class="footer" role="contentinfo">
-    <p>© 2025 XerXes. All rights reserved.</p>
+    <p>© 2025 DxD. All rights reserved.</p>
     <div class="footer-socials" role="navigation" aria-label="Footer social media links">
       <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub"><i class="bx bxl-github"></i></a>
       <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
